@@ -1,0 +1,14 @@
+SELECT *
+FROM production.brands
+INNER JOIN production.products ON production.brands.brand_id=production.products.brand_id;
+
+SELECT
+*
+FROM sales.stores
+INNER JOIN production.stocks ON production.stocks.store_id=sales.stores.store_id
+
+
+
+σ list_price>500 (sales.order_items)
+π List_price,discount (sales.order_items)
+π order_id(σ list_price>2000 (sales.order_items))
